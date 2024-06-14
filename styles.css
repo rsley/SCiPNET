@@ -1,0 +1,98 @@
+/* styles.css */
+body {
+    background-color: #1e1e1e; /* Dark gray background */
+    color: #61dafb; /* Bright blue text */
+    font-family: monospace;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+#login-button {
+    background-color: #61dafb;
+    color: #1e1e1e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-button:hover {
+    background-color: #4CAF50;
+}
+
+#terminal {
+    width: calc(100% - 2in); /* 1in padding on each side */
+    height: calc(100% - 2in); /* 1in padding on top and bottom */
+    border: 2px solid #61dafb; /* Bright blue border */
+    padding: 0.5in;
+    overflow-y: auto;
+    background-color: #282c34; /* Dark blue background */
+    display: none;
+}
+
+#output {
+    flex-grow: 1;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    color: #61dafb;
+}
+
+#input-line {
+    display: flex;
+    align-items: center;
+    color: #61dafb;
+}
+
+#prompt {
+    margin-right: 10px;
+}
+
+#input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #61dafb;
+    flex-grow: 1;
+    font-family: monospace;
+}
+
+/* Add SCP Foundation logo and styling */
+#terminal::before {
+    content: "SECURE. CONTAIN. PROTECT.";
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #61dafb;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Loading animation */
+#loading-animation {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
